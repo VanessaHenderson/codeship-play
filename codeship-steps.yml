@@ -7,7 +7,7 @@
     command: touch target/persists
   - service: maven
     name: sourceclear
-    command: sh -c "DEBUG=1 curl -sSL https://download.sourceclear.com/ci.sh | sh ./"
+    command: sh -c "DEBUG=1 curl -sSL https://download.sourceclear.com/ci.sh | sh -s --scan target/"
 
 - type: parallel
   name: tests
